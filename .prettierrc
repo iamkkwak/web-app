@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    "prettier-plugin-sort-imports",
+    "prettier-plugin-style-order",
+    "prettier-plugin-tailwindcss"
+  ]
+}

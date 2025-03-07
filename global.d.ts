@@ -3,7 +3,10 @@ export {};
 declare global {
   interface Window {
     flutter_inappwebview: {
-      callHandler: (eventName: string, ...args: Array<any>) => Promise<void>;
+      callHandler: (
+        eventName: string,
+        ...args: Array<unknown>
+      ) => Promise<void>;
     };
   }
 }
