@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
   //     },
   //   ];
   // },
+  images: {
+    domains: ["an2-img.amz.wtchn.net", "via.placeholder.com"],
+  },
 };
 
 export default nextConfig;
