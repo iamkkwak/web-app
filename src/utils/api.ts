@@ -1,5 +1,4 @@
-// 실제 프로젝트에서는 진짜 API를 호출하겠지만,
-// 여기서는 더미 데이터를 반환하는 함수들을 만들겠습니다.
+import { createClient } from "@supabase/supabase-js";
 
 import {
   Content,
@@ -7,6 +6,11 @@ import {
   ContentDetailTV,
   Category,
 } from "@/types";
+import { Database } from "database.types";
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_API_KEY || "";
+const supabase = createClient<Database>(supabaseUrl, supabaseKey);
 
 // 더미 데이터
 const dummyContents: Content[] = [

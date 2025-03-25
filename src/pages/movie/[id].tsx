@@ -31,7 +31,7 @@ export default function MovieDetail({ movie }: MovieDetailProps) {
     <div>
       {/* 영화 헤더 섹션 */}
       <div className="relative h-[500px] w-full">
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <Image
             src={movie.backdropPath || ""}
             alt={movie.title}
@@ -40,7 +40,7 @@ export default function MovieDetail({ movie }: MovieDetailProps) {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-        </div>
+        </div> */}
 
         <div className="container-custom relative flex h-full items-end py-12">
           <div className="flex flex-col gap-8 md:flex-row">
@@ -131,7 +131,7 @@ export default function MovieDetail({ movie }: MovieDetailProps) {
             <div className="flex items-center justify-center p-4 text-center">
               <div>
                 <div className="mb-2 flex items-center justify-center">
-                  <FaStar className="text-primary mr-2 text-2xl" />
+                  <FaStar className="mr-2 text-2xl text-primary" />
                   <span className="text-4xl font-bold">
                     {movie.rating.toFixed(1)}
                   </span>
