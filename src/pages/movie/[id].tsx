@@ -1,6 +1,7 @@
 import { getMovieDetailById, getPopularContents } from "@/utils/api";
 import { FaStar, FaClock, FaCalendarAlt } from "react-icons/fa";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { callHandler } from "@/utils/bridge";
 import { ContentDetailMovie } from "@/types";
 import Button from "@/components/ui/Button";
 import { useRouter } from "next/router";
@@ -93,6 +94,7 @@ export default function MovieDetail({ movie }: MovieDetailProps) {
                 <Button
                   variant="outline"
                   className="border-gray-700 bg-gray-800 text-white"
+                  onClick={() => callHandler("openWriteReviewPage", movie)}
                 >
                   평가하기
                 </Button>

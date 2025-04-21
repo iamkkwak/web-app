@@ -1,6 +1,7 @@
 import { getPopularContents, getTVDetailById } from "@/utils/api";
 import { FaStar, FaClock, FaCalendarAlt } from "react-icons/fa";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { callHandler } from "@/utils/bridge";
 import Button from "@/components/ui/Button";
 import { ContentDetailTV } from "@/types";
 import { useRouter } from "next/router";
@@ -95,6 +96,7 @@ export default function TVDetail({ tv }: TVDetailProps) {
                 <Button
                   variant="outline"
                   className="border-gray-700 bg-gray-800 text-white"
+                  onClick={() => callHandler("openWriteReviewPage", tv)}
                 >
                   평가하기
                 </Button>
